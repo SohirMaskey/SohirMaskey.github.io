@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h1>Sohir Maskey</h1>
+            <p>PhD Student @ LMU Munich · <a href="https://www.ai.math.uni-muenchen.de/index.html"> Mathematical Foundations of Artificial Intelligence</a>.</p>
+            <p>
+                Hi there! I am a PhD Student at Ludwig-Maximilians University of Munich, focusing on the theoretical foundations and applications of geometric deep learning. My research encompasses topics such as the generalization abilities and expressivity of graph neural networks, as well as the applications of graph neural ODEs in graph representational learning. My work is supported by the <a href="https://www.simonsfoundation.org/grant/nsf-simons-research-collaborations-on-the-mathematical-and-scientific-foundations-of-deep-learning/"> NSF-Simons Research Collaborations on the Mathematical and Scientific Foundations of Deep Learning</a>, known as MoDL.
+            </p>
+            <p>
+                Previously, I completed my MS in Mathematics at the Technical University of Berlin, where I wrote my thesis on the transferability of graph neural networks under the guidance of Prof. Dr. Gitta Kutyniok. I also hold a BS in Mathematics from the University of Heidelberg, with a minor in Economics.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Image">
+            <div class="social-icons">
+                <a href="mailto:maskey@math.lmu.de"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=your_scholar_id" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/SohirMaskey" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sohir-maskey-33429215b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/SohirMaskey" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="{{ url_for('static', filename='files/cv.pdf') }}" download><i class="fas fa-file-download"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="publications">
+    <h2>Selected Papers</h2>
+    <ul class="publication-list">
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/wl_loopy.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>Weisfeiler and Leman Go Loopy: A New Hierarchy for Graph Representational Learning</h3>
+                <p>R. Paolino*, Sohir Maskey*, P. Welke, G. Kutyniok</p>
+                <p>ICLR Workshop Bridging the Gap Between Practice and Theory in Deep Learning, 2024</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2403.13749" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                    <a href="https://github.com/RPaolino/loopy" class="publication-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </li>
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/gen_bound.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>Generalization Bounds for Message Passing Networks on Mixture of Graphons</h3>
+                <p>Sohir Maskey, G. Kutyniok, R. Levie</p>
+                <p>arXiv preprint arXiv:2404.03473, 2024</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2404.03473" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+        </li>
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/fgl.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>A Fractional Graph Laplacian Approach to Oversmoothing</h3>
+                <p>Sohir Maskey*, R. Paolino*, A. Bacho, G. Kutyniok</p>
+                <p>Advances in Neural Information Processing Systems, 2023</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2305.13084" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                    <a href="https://github.com/RPaolino/fLode" class="publication-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </li>
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/graphon_trans.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>Transferability of Graph Neural Networks: an Extended Graphon Approach</h3>
+                <p>Sohir Maskey, R. Levie, G. Kutyniok</p>
+                <p>Applied and Computational Harmonic Analysis, 2023</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2109.10096" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+        </li>
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/gen_nips.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>Generalization Analysis of Message Passing Neural Networks on Large Random Graphs</h3>
+                <p>Sohir Maskey*, R. Levie*, Y. Lee, G. Kutyniok</p>
+                <p>Advances in Neural Information Processing Systems, 2022</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2202.00645v6" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+        </li>
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/lappe.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>Generalized Laplacian Positional Encoding for Graph Representation Learning</h3>
+                <p>Sohir Maskey*, A. Parviz*, M. Thiessen, H. Stärk, Y. Sadikaj, H. Maron</p>
+                <p>NeurIPS Workshop on Symmetry and Geometry in Neural Representations, 2022</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2210.15956" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+        </li>
+        <li class="publication-item">
+            <img src="{{ url_for('static', filename='images/stab_gen.jpg') }}" alt="Publication Image" class="publication-img">
+            <div class="publication-details">
+                <h3>Stability and Generalization Capabilities of Message Passing Graph Neural Networks</h3>
+                <p>Sohir Maskey, Y. Lee, R. Levie, G. Kutyniok</p>
+                <p>arXiv preprint arXiv:2202.00645, 2022</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2202.00645v3" class="publication-link" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section id="news">
+    <h2>News</h2>
+    <div class="news-list">
+        <div class="news-item">
+            <div class="news-date">
+                <span>Dez</span>
+                <span>2023</span>
+            </div>
+            <div class="news-description">
+                <p>I visited the chair of  <a href="https://www.ams.jhu.edu/villar/"> Prof. Soledad Villar</a> at JHU. I gave a talk about A Fractional Graph Laplacian Approach to Oversmoothing. </p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">
+                <span>Nov</span>
+                <span>2023</span>
+            </div>
+            <div class="news-description">
+                <p>I was selected as a <a href="https://neurips.cc/Conferences/2023/ProgramCommittee">top reviewer</a> at NeurIPS. Thank you for the free registration! </p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">
+                <span>Sep</span>
+                <span>2023</span>
+            </div>
+            <div class="news-description">
+                <p>Our paper on A Fractional Graph Laplacian Approach to Oversmoothing has been accepted as an oral presentation at <a href="https://mlg-europe.github.io/2023/">MLG@ECMLPKDD 2023</a>!</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">
+                <span>Jul</span>
+                <span>2022</span>
+            </div>
+            <div class="news-description">
+                <p>I participated at a research project on p-Laplacian based positional encodings for GNNs at the London Geometry and Machine Learning Summer School. The paper was accepted to the <a href="https://www.neurreps.org/">NeurReps workshop</a> at NeurIPS 2022.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">
+                <span>Dec</span>
+                <span>2021</span>
+            </div>
+            <div class="news-description">
+                <p>I participated at the <a href="https://www.newton.ac.uk/event/mdlw05/"> Workshop on Interpretability, safety and security in AI</a> at Isaac Newton Institute for Mathematical Sciences, University of Cambridge.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">
+                <span>Nov</span>
+                <span>2021</span>
+            </div>
+            <div class="news-description">
+                <p>I participated at the <a href="https://www.newton.ac.uk/event/mdlw03/"> Workshop on Deep learning and partial differential equations</a> at Isaac Newton Institute for Mathematical Sciences, University of Cambridge.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="social-icons">
+        <a href="mailto:maskey@math.lmu.de"><i class="fas fa-envelope"></i> </a> maskey@math.lmu.de
+    </div>
+</section>
+{% endblock %}
