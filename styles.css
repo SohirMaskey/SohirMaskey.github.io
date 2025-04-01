@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+/* Add a universal box-sizing reset for consistent spacing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family:'Open Sans', sans-serif; /*'Roboto', sans-serif;*/
+    font-family: 'Open Sans', sans-serif; /* 'Roboto', sans-serif; */
     font-size: 18px;
     line-height: 1.6;
     margin: 0;
@@ -20,8 +27,9 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
+/* Remove large fixed margin-right so nav can be more flexible */
 .nav-links {
-    margin-right: calc(250px + 8rem); /* Align with profile image */
+    margin: 0;
 }
 
 nav ul {
@@ -210,6 +218,60 @@ footer {
     flex-shrink: 0;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .about-image {
+        margin-top: 1rem;
+    }
+
+    .about-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .publication-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publication-img {
+        margin: 0 0 1rem 0;
+    }
+
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-date {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Connect-Four Demo (if it appears on the site) */
 #connect-four-game {
     display: flex;
     flex-direction: column;
